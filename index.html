@@ -1,1 +1,502 @@
-Hi! This will be live soon!
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Interactive Segmentation of Radiance Fields segments objects semantically and interactively in voxel-based radiance fields.">
+  <meta name="keywords" content="Segmentation, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interctive Segmentation of Radiance Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>-->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://rahulgoel.xyz">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Interactive Segmentation of Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rahulgoel.xyz">Rahul Goel</a></span>,
+            <span class="author-block">
+              <a href="https://dhawal1939.github.io">Dhawal Sirikonda</a></span>,
+            <span class="author-block">
+              <a href="https://sophont01.github.io/">Saurabh Saini</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.co.in/citations?user=3HKjt_IAAAAJ&hl=en">P.J. Narayanan</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://cvit.iiit.ac.in/research/publications">CVIT, IIIT Hyderabad</a></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!--
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              -->
+              <!-- Dataset Link. -->
+              <!--
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+              -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="teaser image showing interactive segmentation">
+      <h2 class="subtitle has-text-centered">
+        A user can interactively segment objects in a radiance field using positive and negative brush strokes.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Radiance Fields (RF) are popular to represent casually-captured
+            scenes for new view generation and have been used for applications
+            beyond it. Understanding and manipulating scenes represented as RFs
+            have to naturally follow to facilitate mixed reality on personal
+            spaces. Semantic segmentation of objects in the 3D scene is an
+            important step for that. Prior segmentation efforts using feature
+            distillation show promise but don't scale to complex objects with
+            diverse appearance. We present a framework to <i>interactively</i>
+            segment objects with fine structure. Nearest neighbor feature
+            matching identifies high-confidence regions of the objects using
+            distilled features. Bilateral filtering in a joint spatio-semantic
+            space grows the region to recover accurate segmentation. We show
+            state-of-the-art results of segmenting objects from RFs and
+            compositing them to another scene, changing appearance, etc., moving
+            closer to rich scene manipulation and understanding.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/6n3pFFPSlW4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="pipeline">
+  <div class="container is-max-desktop">
+    <div>
+      <img src="./static/images/pipeline.png" alt="pipeline diagram showing interactive segmentation">
+      <h2 class="has-text-centered">
+           <b>System overview:</b> We capture a 3D scene of voxelized
+           radiance field and distill the semantic feature into it. Once
+           captured, the user can easily mark a regions using a brush tool on a
+           reference view (green stroke). The features are collected
+           corresponding to the marked pixels and clustered using K-Means. The
+           voxel-grid is then matched using NNFM (nearest neighbor feature
+           matching) to obtain a high confidence seed using a common tight
+           threshold. The seed is then grown using bilateral filtering to
+           smoothly cover the boundaries of the object, conditioning the growth
+           in the spatio-semantic domain.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+    <h2 class="title is-3">Detailed Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/garden_1/1.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/garden_1/2.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/garden_1/3.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/garden_1/4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+      These videos show the segmentation and removal of different
+      objects (that hold semantic meaning) in the 360° garden scene.
+    </h2>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/garden_2/1.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <img class="w-auto" style="height:22vh;" src="./static/videos/garden_2/stroke.png" alt="stroke diagram showing interactive segmentation">
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/garden_2/2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+    <h2 class="has-text-centered">
+      A positive stroke on the pot can segment it out as shown above.<br>
+      Observe the fine strands at the boundary of the extracted pot. This is due
+      to our region growing method that use bilateral filtering.
+    </h2>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/kitchen_1/1.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <img class="w-auto" style="height:22vh;" src="./static/videos/kitchen_1/stroke.png" alt="stroke diagram showing interactive segmentation">
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/kitchen_1/2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+    <h2 class="has-text-centered">
+      Here, we show our method segmenting out the lego JCB placed on the table in the 360° kitchen scene.
+    </h2>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/editing/1.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/editing/2.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/editing/3.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/editing/4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+      Here, we show a progressive scene editing procedure. First we remove the
+      pot, then place a segmented JCB lego on it, and the apply style transfer
+      on just the JCB lego.
+    </h2>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/fine_grained/1.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <img class="w-auto" style="height:22vh;" src="./static/videos/fine_grained/positive.png" alt="stroke diagram showing interactive segmentation">
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/fine_grained/2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/fine_grained/2.mp4"
+                    type="video/mp4">
+          </video>
+          <span class="right-arrow">&#8594;</span>
+          <img class="w-auto" style="height:22vh;" src="./static/videos/fine_grained/negative.png" alt="stroke diagram showing interactive segmentation">
+          <span class="right-arrow">&#8594;</span>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/fine_grained/3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+      Our stroke based method allows the flexibility for fine-grained
+      segmentation. <br>Here, we show the interactive segmentation of the wooden
+      tabletop. The user marks the unwanted granite region and obtains a cleanly
+      segmented tabletop.
+    </h2>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/cmp/gt/chesstable.mp4"
+                    type="video/mp4">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/cmp/n3f/chesstable.mp4"
+                    type="video/mp4">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/cmp/ours/chesstable.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/cmp/gt/shoerack.mp4"
+                    type="video/mp4">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/cmp/n3f/shoerack.mp4"
+                    type="video/mp4">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+            <source src="static/videos/cmp/ours/shoerack.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+      The above method compares the results of previous works N3F/DFF against ours.
+    </h2>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Concurrent Works</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Checkout other amazing concurrent works:
+          </p>
+          <p>
+            <a href="https://spinnerf3d.github.io/">SPIn-NeRF</a> performs in-painting based edits on the radiance fields 
+            by carving out the geometry leveraging 2D segmented masks and video in-painting priors. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{goel2022voxseg,
+  author    = {Goel, Rahul and Sirikonda, Dhawal and Saini, Saurabh and Narayanan, P.J.},
+  title     = {Interactive Segmentation of Radiance Fields},
+  journal   = {arXiv},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template has been borrowed and modified from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
