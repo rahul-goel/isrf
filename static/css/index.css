@@ -122,7 +122,7 @@ body {
   /* margin: 5px; */
   overflow: hidden;
   border-radius: 10px;
-  font-size: 0;
+  font-size: 2;
 }
 
 .results-carousel video {
@@ -134,6 +134,12 @@ body {
   margin: 0;
   padding: 1rem;
 }
+
+.results-carousel caption {
+  /* margin: 0; */
+  padding: 1rem;
+}
+
 
 .interpolation-panel {
   background: #f5f5f5;
@@ -166,4 +172,21 @@ body {
 .right-arrow {
   vertical-align: 180%;
   font-size: 2rem;
+}
+
+.left
+{
+  height: 100vh;
+  width: 50%;
+  border: 1px dotted blue;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+height: 100vh;
+width: 50%;
+border: 1px dotted blue;
+display: flex;
+align-items: left;
 }
