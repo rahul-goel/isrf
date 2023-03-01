@@ -38,13 +38,14 @@
 </head>
 <body>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Interactive Segmentation of Radiance Fields</h1>
+          <h3 class="is-size-4">CVPR 2023</h1>
+          <br>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://rahulgoel.xyz">Rahul Goel</a></span>,
@@ -131,26 +132,24 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" autoplay muted loop preload="none" class="w-auto">
-        <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/demo_tool.webm" type="video/webm">
+        <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/GUI Tool Demonstration Video/garden.mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        A user can interactively segment objects in a radiance field using positive and negative brush strokes.
+        GUI Tool Demonstration on the GARDEN scene. This shows the demonstration of positive and negative strokes.
       </h2>
     </div>
   </div>
-</section>
-
-<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/images/teaser.jpg" alt="teaser image showing interactive segmentation">
+      <video poster="" autoplay muted loop preload="none" class="w-auto">
+        <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/GUI Tool Demonstration Video/kitchen.mp4">
+      </video>
       <h2 class="subtitle has-text-centered">
-        A user can interactively segment objects in a radiance field using positive and negative brush strokes.
+        GUI Tool Demonstration on the KITCHEN scene. This shows the demonstration of multiple positive strokes from different views.
       </h2>
     </div>
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -214,29 +213,19 @@
   </div>
 </section>
 
+
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container has-text-centered">
     <h2 class="title is-3">Detailed Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item rounded-0 border-0 item-sink">
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_1/1.webm"
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/original.mp4"
                     type="video/webm">
           </video>
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_1/2.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_1/3.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_1/4.webm"
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/pot.mp4"
                     type="video/webm">
           </video>
         </div>
@@ -245,86 +234,19 @@
   </div>
   <div>
     <h2 class="has-text-centered">
-      These videos show the segmentation and removal of different
-      objects (that hold semantic meaning) in the 360° garden scene.
+        Here, we show the segmentation of the Flower Pot in the GARDEN scene. Note the segmentation in the strands which is possible due to region growing.
     </h2>
   </div>
-</section>
-
-<section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container has-text-centered">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item rounded-0 border-0 item-sink">
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_2/1.webm"
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/original.mp4"
                     type="video/webm">
           </video>
-          <span class="right-arrow">&#8594;</span>
-          <img class="w-auto" style="height:22vh;" src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_2/stroke.jpg" alt="stroke diagram showing interactive segmentation">
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/garden_2/2.webm"
-                    type="video/webm">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-    <h2 class="has-text-centered">
-      A positive stroke on the pot can segment it out as shown above.<br>
-      Observe the fine strands at the boundary of the extracted pot. This is due
-      to our region growing method that use bilateral filtering.
-    </h2>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item rounded-0 border-0 item-sink">
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/kitchen_1/1.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <img class="w-auto" style="height:22vh;" src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/kitchen_1/stroke.jpg" alt="stroke diagram showing interactive segmentation">
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/kitchen_1/2.webm"
-                    type="video/webm">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-    <h2 class="has-text-centered">
-      Here, we show our method segmenting out the lego JCB placed on the table in the 360° kitchen scene.
-    </h2>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item rounded-0 border-0 item-sink">
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/editing/1.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/editing/2.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/editing/3.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/editing/4.webm"
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/nopot.mp4"
                     type="video/webm">
           </video>
         </div>
@@ -333,46 +255,19 @@
   </div>
   <div>
     <h2 class="has-text-centered">
-      Here, we show a progressive scene editing procedure. First we remove the
-      pot, then place a segmented JCB lego on it, and the apply style transfer
-      on just the JCB lego.
+        This shows the scene with the pot removed.
     </h2>
   </div>
-</section>
-
-<section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container has-text-centered">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item rounded-0 border-0 item-sink">
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/fine_grained/1.webm"
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/original.mp4"
                     type="video/webm">
           </video>
-          <span class="right-arrow">&#8594;</span>
-          <img class="w-auto" style="height:22vh;" src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/fine_grained/positive.jpg" alt="stroke diagram showing interactive segmentation">
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/fine_grained/2.webm"
-                    type="video/webm">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item rounded-0 border-0 item-sink">
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/fine_grained/2.webm"
-                    type="video/webm">
-          </video>
-          <span class="right-arrow">&#8594;</span>
-          <img class="w-auto" style="height:22vh;" src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/fine_grained/negative.jpg" alt="stroke diagram showing interactive segmentation">
-          <span class="right-arrow">&#8594;</span>
-          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
-            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/fine_grained/3.webm"
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/wooden_tabletop.mp4"
                     type="video/webm">
           </video>
         </div>
@@ -381,10 +276,72 @@
   </div>
   <div>
     <h2 class="has-text-centered">
-      Our stroke based method allows the flexibility for fine-grained
-      segmentation. <br>Here, we show the interactive segmentation of the wooden
-      tabletop. The user marks the unwanted granite region and obtains a cleanly
-      segmented tabletop.
+        Here, the just the wooden tabletop has been segmented with the central granite removed.
+    </h2>
+  </div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/kitchen/original.mp4"
+                    type="video/webm">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/kitchen/kitchen_lego.mp4"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+        Here, we show the segmentation of the lego JCB.
+    </h2>
+  </div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Various Segmentations/garden/original.mp4"
+                    type="video/webm">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Editing Neural Fields/Translated Pot.mp4"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+        Here, we take the pot and place it on the ground underneath the table.
+    </h2>
+  </div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item rounded-0 border-0 item-sink">
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Editing Neural Fields/Composition.mp4"
+                    type="video/webm">
+          </video>
+          <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:30vh;">
+            <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Editing Neural Fields/Stylization.mp4"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="has-text-centered">
+        These two videos show composition of the two radiance fields. In the
+        second video, we have applied style transfer <br> on just the segmented part
+        to demonstrate appearance editing on desired objects.
     </h2>
   </div>
 </section>
@@ -397,7 +354,7 @@
           <table align="center">
             <tr>
               <th>
-                <p id="topText">Radiance Fields</p>
+                <p id="topText">Ground Truth</p>
               </th>
               <th>
                 <p id="topText">N3F/DFF</p>
@@ -410,19 +367,19 @@
             <tr>
               <td>
                 <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
-                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/cmp/gt/chesstable.webm"
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/GT/chesstable.mp4"
                           type="video/webm">
                 </video>
               </td>
               <td>
                 <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
-                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/cmp/n3f/chesstable.webm"
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/N3F/chesstable.mp4"
                           type="video/webm">
                 </video>
               </td>
               <td>
                 <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
-                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/cmp/ours/chesstable.webm"
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/Ours/chesstable.mp4"
                           type="video/webm">
               </td>
             </tr>
@@ -430,19 +387,39 @@
             <tr>
               <td>
                 <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
-                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/cmp/gt/shoerack.webm"
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/GT/shoerack.mp4"
                           type="video/webm">
                 </video>
               </td>
               <td>
                 <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
-                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/cmp/n3f/shoerack.webm"
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/N3F/shoerack.mp4"
                           type="video/webm">
                 </video>
               </td>
               <td>
                 <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
-                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/videos/cmp/ours/shoerack.webm"
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/Ours/shoerack.mp4"
+                          type="video/webm">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/GT/stove.mp4"
+                          type="video/webm">
+                </video>
+              </td>
+              <td>
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/N3F/stove.mp4"
+                          type="video/webm">
+                </video>
+              </td>
+              <td>
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:33vh;">
+                  <source src="https://raw.githubusercontent.com/rahul-goel/isrf/main/.github/Comparison/Ours/stove.mp4"
                           type="video/webm">
               </td>
             </tr>
@@ -450,20 +427,16 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="hero-body">
-    <div class="container has-text-centered">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item rounded-0 border-0 item-sink">
-        </div>
-      </div>
+    <div>
+        <h2 class="has-text-centered">
+            The above videos compare the results of N3F's segmentation against our method on the same user input.
+        </h2>
     </div>
-  </div> -->
+  </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
-    <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Concurrent Works</h2>
@@ -479,11 +452,8 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
-
   </div>
-</section>
-
+</section> -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
