@@ -65,16 +65,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://iiitaphyd-my.sharepoint.com/:b:/g/personal/rahul_goel_research_iiit_ac_in/EYqOT-RpUW9ElHyWnceg_mkBj5RJHXFlpdPApcm70eYJHA?e=fXzXCc"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2212.13545"
                    class="external-link button is-normal is-rounded is-dark">
@@ -95,9 +85,8 @@
                 </a>
               </span>
               <!-- Code Link. -->
-              <!--
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/rahul-goel/isrf_code"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -105,11 +94,9 @@
                   <span>Code</span>
                   </a>
               </span>
-              -->
               <!-- Dataset Link. -->
-              <!--
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/rahul_goel_research_iiit_ac_in/Es4qJ_plQY1Pnqw_OwSzqNQBdtiFrBLUlLi_Da8Fn2Ukvw?e=9AA6M6"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -117,7 +104,6 @@
                   <span>Data</span>
                   </a>
               </span>
-              -->
             </div>
 
           </div>
@@ -126,7 +112,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -159,21 +144,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Radiance Fields (RF) are popular to represent casually-captured
-            scenes for new view generation and have been used for applications
-            beyond it. Understanding and manipulating scenes represented as RFs
-            have to naturally follow to facilitate mixed reality on personal
-            spaces. Semantic segmentation of objects in the 3D scene is an
-            important step for that. Prior segmentation efforts using feature
-            distillation show promise but don't scale to complex objects with
-            diverse appearance. We present a framework to <i>interactively</i>
-            segment objects with fine structure. Nearest neighbor feature
-            matching identifies high-confidence regions of the objects using
-            distilled features. Bilateral filtering in a joint spatio-semantic
-            space grows the region to recover accurate segmentation. We show
-            state-of-the-art results of segmenting objects from RFs and
-            compositing them to another scene, changing appearance, etc., moving
-            closer to rich scene manipulation and understanding.
+            Radiance Fields (RF) are popular to represent
+            casually-captured scenes for new view synthesis and several
+            applications beyond it. Mixed reality on personal spaces needs
+            understanding and manipulating scenes represented as RFs, with
+            semantic segmentation of objects as an important step. Prior
+            segmentation efforts show promise but don't scale to complex objects
+            with diverse appearance. We present the ISRF method to interactively
+            segment objects with fine structure and appearance. Nearest neighbor
+            feature matching using distilled semantic features identifies
+            high-confidence seed regions. Bilateral search in a joint
+            spatio-semantic space grows the region to recover accurate
+            segmentation. We show state-of-the-art results of segmenting objects
+            from RFs and compositing them to another scene, changing appearance,
+            etc., and an interactive segmentation tool that others can use.
           </p>
         </div>
       </div>
